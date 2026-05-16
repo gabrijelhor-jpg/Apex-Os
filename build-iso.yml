@@ -1,0 +1,46 @@
+# Ime koje vidiš u GitHub → Actions (lijevo)
+name: Build Apex ISO
+
+on:
+  # Ručno pokretanje: Actions → Build Apex ISO → Run workflow
+  workflow_dispatch:
+
+  # Pokrene se i kad pushaš projekt na main (da vidiš da Actions radi)
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  iso:
+    name: Gradnja Apex ISO datoteke
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+      options: --privileged
+
+    steps:
+      - name: Preuzmi kod s GitHuba
+        uses: actions/checkout@v4
+
+      - name: Pripremi Arch (ključevi i archiso)
+        run: |
+          pacman-key --init
+          pacman-key --populate archlinux
+          pacman -Syu --noconfirm archiso sudo
+
+      - name: Kopiraj boot datoteke za ISO
+        run: bash os/scripts/prepare-profile.sh
+
+      - name: Izgradi ISO (traje 30-90 min)
+        run: |
+          cd os/archiso
+          mkarchiso -v -o out apexos
+          ls -lh out/
+
+      - name: Spremi ISO za preuzimanje
+        uses: actions/upload-artifact@v4
+        with:
+          name: apexos-iso
+          path: os/archiso/out/*.iso
+          if-no-files-found: error
