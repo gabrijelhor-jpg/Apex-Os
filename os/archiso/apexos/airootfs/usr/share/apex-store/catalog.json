@@ -1,0 +1,81 @@
+{
+  "apps": [
+    {
+      "id": "google",
+      "name": "Google (preglednik)",
+      "category": "Internet",
+      "packages": ["chromium"],
+      "description": "Preglednik Chromium — otvara Google. Za puni Google Chrome koristi Apex Store nakon dodavanja AUR repozitorija."
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "category": "Internet",
+      "packages": ["firefox"],
+      "description": "Mozilla Firefox web preglednik."
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "category": "Ured",
+      "packages": ["libreoffice-fresh"],
+      "description": "Uredski paket — dokumenti, tablice, prezentacije."
+    },
+    {
+      "id": "vlc",
+      "name": "VLC",
+      "category": "Multimedija",
+      "packages": ["vlc"],
+      "description": "Reprodukcija videa i glazbe."
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "category": "Grafika",
+      "packages": ["gimp"],
+      "description": "Uređivanje slika."
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "Chat",
+      "packages": ["discord"],
+      "description": "Discord za chat i glasovne pozive."
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "category": "Igre",
+      "packages": ["steam"],
+      "description": "Steam klijent za igre."
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "category": "Razvoj",
+      "packages": ["code"],
+      "description": "Uređivač koda od Microsofta."
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "Glazba",
+      "packages": ["spotify"],
+      "description": "Spotify klijent za streaming glazbe."
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird",
+      "category": "E-pošta",
+      "packages": ["thunderbird"],
+      "description": "Klijent za e-poštu."
+    },
+    {
+      "id": "wine",
+      "name": "Wine",
+      "category": "Kompatibilnost",
+      "packages": ["wine", "winetricks"],
+      "description": "Pokretanje nekih Windows programa (.exe) — ograničena podrška."
+    }
+  ]
+}

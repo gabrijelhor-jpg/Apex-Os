@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Apex Update
+Name[hr]=Apex Update
+Comment=Ažuriraj Apex OS i programe
+Exec=/usr/local/bin/apex-update
+Icon=system-software-update
+Terminal=false
+Categories=System;
+StartupNotify=true

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Što je ISO? — Apex OS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark"></span><span>Apex OS</span></a>
+      <nav>
+        <a href="index.html">Početna</a>
+        <a href="instalacija.html">Instalacija</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap prose">
+      <h1>Što je ISO?</h1>
+      <p class="lead">
+        <strong>ISO</strong> je jedna velika datoteka (npr. 4 GB) u kojoj je spremljen <strong>cijeli Apex OS</strong>,
+        kao instalacijski DVD — samo kao datoteka na disku.
+      </p>
+
+      <h2>Zašto ti treba?</h2>
+      <p>Bez ISO-a ne možeš Apex staviti na USB i instalirati na laptop. To je kao Windows instalacijski USB — samo za Apex.</p>
+
+      <h2>Kako doći do ISO-a?</h2>
+      <p><strong>Najlakše na Windowsu:</strong> uploadaj projekt na GitHub i neka se ISO izgradi automatski (oko 1 sat).</p>
+      <ol>
+        <li>Napravi račun na <a href="https://github.com">github.com</a></li>
+        <li>Uploadaj mapu Apex (GitHub Desktop je najlakši)</li>
+        <li>Actions → <strong>Build Apex ISO</strong> → Run workflow</li>
+        <li>Preuzmi gotov ISO iz Artifacts</li>
+      </ol>
+      <p class="hash"><strong>Ne vidiš „Build Apex ISO”?</strong> Uploadaj skrivenu mapu <code>.github</code>. Na PC-u pokreni <code>napravi-zip-za-github.ps1</code> ili pročitaj <code>docs/NEMA-BUILD-APEX-ISO.md</code>.</p>
+      <p>Detaljno: <code>docs/GITHUB-ISO.md</code></p>
+
+      <h2>Kad imaš ISO</h2>
+      <ol>
+        <li>Preuzmi datoteku <code>apexos-....iso</code></li>
+        <li>Rufus → zapiši na USB</li>
+        <li>Slijedi <a href="instalacija.html">upute za instalaciju</a></li>
+      </ol>
+
+      <p><a class="btn btn-primary" href="index.html#download">Natrag</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>Apex OS</p></div>
+  </footer>
+</body>
+</html>

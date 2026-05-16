@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Google
+Name[hr]=Google
+Comment=Otvori Google u pregledniku
+Exec=/usr/bin/apex-google
+Icon=chromium
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true

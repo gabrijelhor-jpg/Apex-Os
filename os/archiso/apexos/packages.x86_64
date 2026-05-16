@@ -1,0 +1,108 @@
+# Apex OS — live desktop (offline-first, Windows-like UX via KDE Plasma)
+
+# Base / live
+arch-install-scripts
+mkinitcpio-archiso
+mkinitcpio-nfs-utils
+squashfs-tools
+xz
+efibootmgr
+memtest86+-efi
+syslinux
+
+# Kernel & firmware
+linux
+linux-firmware
+amd-ucode
+intel-ucode
+
+# Boot & init
+mkinitcpio
+os-prober
+
+# Network (optional online; works offline without connection)
+networkmanager
+nm-connection-editor
+iwd
+
+# Audio / video
+pipewire
+pipewire-alsa
+pipewire-pulse
+wireplumber
+pavucontrol
+easyeffects
+mesa
+vulkan-intel
+vulkan-radeon
+
+# Plasma desktop (familiar layout: panel, start menu, window controls)
+plasma-meta
+sddm
+konsole
+dolphin
+ark
+kate
+spectacle
+gwenview
+okular
+kcalc
+kde-gtk-config
+xdg-desktop-portal-kde
+powerdevil
+bluedevil
+kdeconnect
+plasma-nm
+plasma-pa
+plasma-systemmonitor
+packagekit-qt6
+discover
+
+# Breeze dark — clean default look
+breeze-gtk
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+
+# Apex apps
+python
+tk
+chromium
+calamares
+archinstall
+polkit
+
+# Apps (offline)
+firefox
+libreoffice-fresh
+vlc
+gimp
+evince
+file-roller
+p7zip
+unzip
+rsync
+timeshift
+
+# Hardware / laptop
+acpi
+acpid
+upower
+bolt
+fprintd
+tlp
+tlp-rdw
+
+# Utils
+sudo
+vim
+nano
+git
+wget
+curl
+htop
+bash-completion
+man-db
+man-pages
+texinfo

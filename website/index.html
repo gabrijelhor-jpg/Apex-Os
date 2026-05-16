@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Apex OS — besplatan operativni sustav za laptope. Offline, poznat izgled radne površine." />
+  <title>Apex OS — Preuzmi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Apex OS</span>
+      </a>
+      <nav>
+        <a href="#features">Značajke</a>
+        <a href="#download">Preuzmi</a>
+        <a href="#install">Instalacija</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Besplatno · Offline · Za sve</p>
+          <h1>Operativni sustav za laptop.<br />Poznato. Brzo. Tvoje.</h1>
+          <p class="lead">
+            Apex je Linux distribucija s radnom površinom koja podsjeća na Windows —
+            bez licence, bez pretplate, bez obaveznog interneta nakon postavljanja.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download" id="hero-download">Preuzmi Apex OS</a>
+            <a class="btn btn-ghost" href="instalacija.html">Kako instalirati na laptop</a>
+          </div>
+          <p class="fine-print">Nije Microsoft Windows. Temelj: otvoreni Linux (Arch + KDE Plasma).</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="mock-desktop">
+            <div class="mock-titlebar">
+              <span></span><span></span><span></span>
+              <span class="mock-title">Apex — Desktop</span>
+            </div>
+            <div class="mock-taskbar"></div>
+            <div class="mock-icons">
+              <div></div><div></div><div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="wrap">
+        <h2>Zašto Apex</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Offline</h3>
+            <p>Preglednik, ured, multimedija i alati dolaze ugrađeni. Internet nije obavezan za svakodnevni rad.</p>
+          </article>
+          <article class="card">
+            <h3>Besplatno</h3>
+            <p>Bez licence, bez paywalla. Preuzmeš ISO i koristiš na svom laptopu.</p>
+          </article>
+          <article class="card">
+            <h3>Poznat izgled</h3>
+            <p>Panel, izbornik aplikacija i prozori kao na klasičnoj radnoj površini — manje učenja.</p>
+          </article>
+          <article class="card">
+            <h3>Explorer &amp; Postavke</h3>
+            <p>Explorer za datoteke, Apex Postavke (zvuk do 150%), Apex Update za ažuriranja sustava.</p>
+          </article>
+          <article class="card">
+            <h3>Apex Store</h3>
+            <p>Instaliraj Discord, Steam, VS Code i druge aplikacije jednim klikom.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section section-accent">
+      <div class="wrap download-block">
+        <h2>Preuzmi</h2>
+        <p class="version" id="version-label">Apex OS 1.0 — x86_64 (većina laptopa)</p>
+        <a class="btn btn-primary btn-lg btn-disabled" href="#download" id="iso-link" aria-disabled="true">Preuzmi ISO</a>
+        <p class="hash" id="iso-note">Učitavam informacije o preuzimanju…</p>
+        <p class="hash">
+          <a href="iso.html">Što je ISO i kako ga izraditi? →</a><br />
+          <a href="instalacija.html">Instalacija na laptop →</a>
+        </p>
+        <ul class="req">
+          <li>64-bit procesor (Intel/AMD)</li>
+          <li>4 GB RAM preporučeno</li>
+          <li>20 GB slobodnog prostora za instalaciju</li>
+          <li>USB 8 GB+ za live boot</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="wrap">
+        <h2>Instalacija u 4 koraka</h2>
+        <ol class="steps">
+          <li><strong>Preuzmi</strong> ISO datoteku s ove stranice.</li>
+          <li><strong>USB</strong> — zapiši ISO alatom (Rufus, balenaEtcher, Ventoy).</li>
+          <li><strong>Boot</strong> — u BIOS/UEFI odaberi USB; po potrebi isključi Secure Boot.</li>
+          <li><strong>Instaliraj</strong> — u live sustavu klikni <strong>Instaliraj Apex OS</strong> (Calamares).</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="wrap">
+        <h2>Česta pitanja</h2>
+        <details>
+          <summary>Je li Apex isto što i Windows?</summary>
+          <p>Ne. Apex je zaseban open-source sustav temeljen na Linuxu. Izgled je sličan, ali to nije Windows i ne pokreće .exe instalere bez dodatnog softvera (npr. Wine).</p>
+        </details>
+        <details>
+          <summary>Radi li na Macu?</summary>
+          <p>Primarno je za PC laptope (x86_64). Na Apple Mac računalima obično ostaje macOS ili dual-boot / virtualna mašina — ovisno o modelu.</p>
+        </details>
+        <details>
+          <summary>Treba li internet?</summary>
+          <p>Ne za svakodnevni rad nakon instalacije. Internet treba samo za preuzimanje ISO-a i ažuriranja ako ih želiš.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Apex OS — open source. Nije povezano s Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <script type="application/json" id="apex-download-config">
+  {
+    "version": "1.0",
+    "url": "",
+    "filename": "apexos-1.0-x86_64.iso",
+    "sha256": "",
+    "note": "ISO još nije na serveru. Dok ne postaviš link u download.json, koristi upute za izgradnju ISO-a u docs/BUILD.md ili otvori stranicu preko: python -m http.server 8080 u mapi website."
+  }
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Explorer
+Name[hr]=Explorer
+GenericName=File Manager
+GenericName[hr]=Upravitelj datoteka
+Comment=Pregledaj mape i datoteke (kao na Windowsu)
+Exec=dolphin %U
+Icon=system-file-manager
+Terminal=false
+Categories=System;FileManager;
+StartupNotify=true

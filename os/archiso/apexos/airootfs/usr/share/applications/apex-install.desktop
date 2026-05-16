@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Instaliraj Apex OS
+Name[hr]=Instaliraj Apex OS
+Comment=Grafička instalacija Apex OS-a na tvoj laptop
+Comment[hr]=Instaliraj Apex na tvrdi disk
+Exec=calamares
+Icon=system-installer
+Terminal=false
+Categories=System;Settings;
+StartupNotify=true

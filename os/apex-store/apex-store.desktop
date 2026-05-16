@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Apex Store
+Name[hr]=Apex Store
+Comment=Službena trgovina aplikacija za Apex OS
+Comment[hr]=Instaliraj i ukloni aplikacije na Apex OS-u
+Exec=/usr/bin/apex-store
+Icon=system-software-install
+Terminal=false
+Categories=System;PackageManager;
+StartupNotify=true

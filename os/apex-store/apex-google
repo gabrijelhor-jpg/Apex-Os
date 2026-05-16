@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Pokreće Chromium s Google početnom stranicom (ugrađeno u Apex OS)
+exec chromium --new-window "https://www.google.com" "$@"

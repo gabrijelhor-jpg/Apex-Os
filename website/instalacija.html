@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instalacija Apex OS na laptop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark"></span><span>Apex OS</span></a>
+      <nav>
+        <a href="index.html#download">Preuzmi</a>
+        <a href="index.html">Početna</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap prose">
+      <h1>Instalacija Apex OS na laptop</h1>
+      <p class="lead">Korak-po-korak vodič za Windows laptop. Procijenjeno vrijeme: 30–60 minuta.</p>
+
+      <h2>1. Priprema</h2>
+      <ul>
+        <li>USB 8 GB+ (bit će obrisan)</li>
+        <li>ISO datoteka Apex OS-a</li>
+        <li><a href="https://rufus.ie" target="_blank" rel="noopener">Rufus</a> ili <a href="https://etcher.balena.io" target="_blank" rel="noopener">Etcher</a></li>
+        <li>Backup važnih datoteka ako brišeš Windows</li>
+      </ul>
+
+      <h2>2. Preuzmi ISO</h2>
+      <p>Na <a href="index.html#download">početnoj stranici</a> klikni <strong>Preuzmi ISO</strong>. Ako piše da ISO nije dostupan, prvo ga moraš izgraditi (developer) ili pričekati objavu na serveru.</p>
+      <p><strong>Stranica ne radi lokalno?</strong> U mapi <code>website</code> pokreni:</p>
+      <pre><code>python -m http.server 8080</code></pre>
+      <p>Zatim otvori <code>http://localhost:8080</code></p>
+
+      <h2>3. Zapiši ISO na USB (Rufus)</h2>
+      <ol>
+        <li>Umetni USB</li>
+        <li>Rufus → Select → tvoj <code>apexos-....iso</code></li>
+        <li>Scheme: <strong>GPT</strong> (noviji laptopi) ili MBR (stariji)</li>
+        <li>START</li>
+      </ol>
+
+      <h2>4. Boot s USB-a</h2>
+      <ol>
+        <li>Restart laptopa s umetnutim USB-om</li>
+        <li>Pritisni <strong>F12</strong>, <strong>F2</strong>, <strong>Esc</strong> ili <strong>Del</strong> (ovisno o modelu)</li>
+        <li>Odaberi USB / UEFI boot</li>
+        <li>Ako ne radi: u BIOS isključi <strong>Secure Boot</strong> i <strong>Fast Boot</strong></li>
+      </ol>
+
+      <h2>5. Instaliraj na disk</h2>
+      <ol>
+        <li>U live Apex OS-u spoji Wi‑Fi</li>
+        <li>Na radnoj površini klikni <strong>Instaliraj Apex OS</strong></li>
+        <li>Odaberi jezik, particije, korisničko ime i lozinku</li>
+        <li>Čekaj kraj instalacije → Restart → izvadi USB</li>
+      </ol>
+
+      <h2>6. Nakon instalacije</h2>
+      <ul>
+        <li><strong>Google</strong> — preglednik (Chromium) s Google stranicom</li>
+        <li><strong>Apex Store</strong> — instaliraj Discord, Steam, dodatne aplikacije (treba internet)</li>
+      </ul>
+
+      <h2>Live prijava (prije instalacije)</h2>
+      <p>Korisnik: <code>liveuser</code> · Lozinka: <code>apex</code></p>
+
+      <p><a class="btn btn-primary" href="index.html#download">Natrag na preuzimanje</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>Apex OS</p></div>
+  </footer>
+</body>
+</html>

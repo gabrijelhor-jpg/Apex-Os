@@ -1,0 +1,31 @@
+---
+componentName: default
+
+strings:
+    productName:         Apex OS
+    shortProductName:    Apex
+    version:             1.0
+    shortVersion:        1.0
+    versioned:           false
+    shortVersioned:      false
+    bootloaderEntryName: Apex OS
+    productUrl:          https://github.com/apex-os
+    supportUrl:          https://github.com/apex-os
+    knownIssuesUrl:      https://github.com/apex-os/issues
+    releaseNotesUrl:     https://github.com/apex-os
+
+    sidebar:             welcome
+    welcome:
+        style:           "font-size:14px;"
+        calcfg:          "color:#e8eef7;"
+    welcomeExpandingLogo: true
+
+style:
+   sidebarBackground:    #0a0e14
+   sidebarText:          #e8eef7
+   sidebarTextSelect:    #3b9eff
+
+images:
+    productLogo:         "64"
+    productIcon:         "64"
+    productWelcome:      "welcome.png"

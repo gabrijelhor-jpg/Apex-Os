@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Apex Postavke
+Name[hr]=Apex Postavke
+Comment=Postavke sustava, zvuk, mreža
+Exec=/usr/local/bin/apex-settings
+Icon=preferences-system
+Terminal=false
+Categories=Settings;
+StartupNotify=true

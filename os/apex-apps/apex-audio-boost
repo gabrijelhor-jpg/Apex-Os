@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Zvuk: pavucontrol + EasyEffects (pojačavanje). Postavlja max glasnoću na 150% gdje je moguće.
+set -euo pipefail
+
+PRESET_DIR="/usr/share/apex-os/easyeffects"
+USER_PRESET="${XDG_CONFIG_HOME:-$HOME/.config}/easyeffects/output"
+
+mkdir -p "$(dirname "$USER_PRESET")"
+if [[ -f "$PRESET_DIR/apex-boost.json" ]]; then
+  cp -f "$PRESET_DIR/apex-boost.json" "$USER_PRESET" 2>/dev/null || true
+fi
+
+# PipeWire: dopusti glasnoću iznad 100% (sistemski ako postoji)
+WP_SYS="/etc/wireplumber/wireplumber.conf.d/apex-volume-boost.conf"
+if [[ -f "$WP_SYS" ]]; then
+  echo "Apex: pojačavanje zvuka aktivno (do ~150%)."
+fi
+
+if command -v easyeffects >/dev/null; then
+  easyeffects --gapplication-service &
+  sleep 0.5
+  easyeffects &
+fi
+
+if command -v pavucontrol >/dev/null; then
+  pavucontrol &
+elif command -v systemsettings >/dev/null; then
+  systemsettings kcm_pulseaudio &
+else
+  konsole -e bash -c 'echo "Instaliraj pavucontrol iz Apex Storea"; read'
+fi

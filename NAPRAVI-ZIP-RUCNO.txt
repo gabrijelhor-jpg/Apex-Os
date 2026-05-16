@@ -1,0 +1,7 @@
+Ako ni .bat ne radi — zalijepi OVE naredbe u PowerShell (jednu po jednu):
+
+cd $env:USERPROFILE\Desktop\Apex
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$root='$env:USERPROFILE\Desktop\Apex'; $zip=Join-Path $root 'Apex-za-GitHub.zip'; $stage=Join-Path $env:TEMP 'Apex-github-upload'; if(Test-Path $zip){Remove-Item $zip -Force}; if(Test-Path $stage){Remove-Item $stage -Recurse -Force}; New-Item -ItemType Directory -Path $stage | Out-Null; robocopy $root $stage /E /XD '.git' 'os\archiso\out' 'os\archiso\work' /XF '*.iso' | Out-Null; Compress-Archive -Path (Join-Path $stage '*') -DestinationPath $zip -Force; Remove-Item $stage -Recurse -Force; Write-Host 'Gotovo:' $zip -ForegroundColor Green"
+
+Zatim uploadaj Apex-za-GitHub.zip na GitHub.
